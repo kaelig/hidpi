@@ -5,7 +5,6 @@ body { font-family: sans-serif; }
 [id^=logo] { // Set default background image
   height: image-height('logo.png');
   width:  image-width('logo.png');
-  background: url('../images/logo.png') no-repeat;
   margin-bottom: 2em;
 }
 
@@ -13,6 +12,8 @@ body { font-family: sans-serif; }
 // for high density displays
 
 #logo-manual {
+  background: url('../images/logo.png') no-repeat;
+
   @include hidpi {
     background-image: url('../images/logo_x2.png');
     -webkit-background-size: 250px 188px;
@@ -23,6 +24,8 @@ body { font-family: sans-serif; }
 }
 
 #logo-manual-debug {
+  background: url('../images/logo.png') no-repeat;
+
   $hidpi-debug: true;
   @include hidpi {
     background-image: url('../images/logo_x2.png');

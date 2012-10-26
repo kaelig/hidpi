@@ -39,11 +39,16 @@ Will output:
 #logo {
   background: url("../images/logo.png") no-repeat;
 }
+
 @media (-webkit-min-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (min--moz-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3) {
   #logo {
     background-image: url("../images/logo_x2.png");
     background-size: 100px 30px;
   }
+}
+
+#logo-auto {
+  background-image: url('../images/logo.png');
 }
 
 @media (-webkit-min-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (min--moz-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3) {
