@@ -3,10 +3,10 @@
 `hidpi()` is a Sass mixin that seamlessly serves high resolution
 background images to high density (Retina-like) displays.
 
-## How to use it
+## How to Use It
 
 [Download _hidpi.scss](https://raw.github.com/Kaelig/sass-hidpi/master/_hidpi.scss)
-in your Compass project.
+to your Compass project.
 
 Import the partial in your Sass files:
 
@@ -57,9 +57,12 @@ Will output:
 }
 ```
 
-### Debug mode
+### Debug Mode
 
-You can force the high resolution mode:
+You can force `hidpi()` to output high resolution graphics to always serve
+high-definition images and test rendering on a regular display.
+
+Set the `$hidpi-debug` variable to `true`:
 
 ```scss
 #logo-auto-debug {
@@ -68,7 +71,7 @@ You can force the high resolution mode:
 }
 ```
 
-Will serve high definition images to regular displays:
+It will then load `logo_x2.png` by default (no `@media` queries):
 
 ```css
 #logo-auto-debug {
@@ -80,21 +83,19 @@ Will serve high definition images to regular displays:
 }
 ```
 
-It's particularly handy when debugging on a non-Retina-like display.
-
 ## Requirements
 
 To use Sass HiDPI, you need:
 
-- Sass 3.2+
-- Compass
+- Sass ~> 3.2
+- Compass ~> 0.12.2
 
-Images should follow these naming conventions:
+Image files should follow these naming conventions:
 
 - `image.png # default`
 - `image_x2.png # High DPI`
 
-## Also read
+## Also Read
 
 - [Easy retina-ready images using SCSS by Jason Z. of 37signals](http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss)
 - [Retinafy your web sites and apps — ebook by Thomas Fuchs](http://retinafy.me/)
