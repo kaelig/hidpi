@@ -14,6 +14,7 @@ Import the partial in your Sass files:
 
 Perfect, you can now use the mixin in your selectors:
 
+```css
     // Example: Logo
     #logo {
       background: url('../images/logo.png') no-repeat;
@@ -29,9 +30,11 @@ Perfect, you can now use the mixin in your selectors:
       // Or let Compass do the magic
       @include hidpi(logo);
     }
+```
 
 Will output:
 
+```css
     #logo {
       background: url("../images/logo.png") no-repeat;
     }
@@ -51,18 +54,22 @@ Will output:
         background-size: 250px 188px;
       }
     }
+```
 
 ### Debug mode
 
 You can force the high resolution mode:
 
+```css
     #logo-auto-debug {
       $hidpi-debug: true; // Force high-res mode
       @include hidpi(logo);
     }
+```
 
 Will output:
 
+```css
     #logo-auto-debug {
       background-image: url('../images/logo_x2.png');
       -webkit-background-size: 250px 188px;
@@ -70,6 +77,7 @@ Will output:
       -o-background-size: 250px 188px;
       background-size: 250px 188px;
     }
+```
 
 It's particularly handy when debugging on a regular monitor.
 
