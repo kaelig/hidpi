@@ -1,0 +1,47 @@
+@import '../../hidpi';
+
+body { font-family: sans-serif; }
+
+[id^=logo] { // Set default background image
+  height: image-height('logo.png');
+  width:  image-width('logo.png');
+  background: url('../images/logo.png') no-repeat;
+  margin-bottom: 2em;
+}
+
+// Set a content block and manually pass declarations
+// for high density displays
+
+#logo-manual {
+  @include hidpi {
+    background-image: url('../images/logo_x2.png');
+    -webkit-background-size: 250px 188px;
+    -moz-background-size: 250px 188px;
+    -o-background-size: 250px 188px;
+    background-size: 250px 188px;
+  }
+}
+
+#logo-manual-debug {
+  $hidpi-debug: true;
+  @include hidpi {
+    background-image: url('../images/logo_x2.png');
+    -webkit-background-size: 250px 188px;
+    -moz-background-size: 250px 188px;
+    -o-background-size: 250px 188px;
+    background-size: 250px 188px;
+  }
+  $hidpi-debug: false; // Set debug back to false
+}
+
+// Let Compass do its magic by passing only
+// the name of the original image
+
+#logo-auto {
+  @include hidpi(logo);
+}
+
+#logo-auto-debug {
+  $hidpi-debug: true;
+  @include hidpi(logo);
+}
