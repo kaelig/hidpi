@@ -5,7 +5,7 @@ graphics for high density displays.
 
 ## How to use it
 
-[Download _hidpi.scss](https://github.com/Kaelig/sass-hidpi/_hidpi.scss)
+[Download _hidpi.scss](https://raw.github.com/Kaelig/sass-hidpi/master/_hidpi.scss)
 and put it in your compass project.
 
 Import the partial in your Sass files:
