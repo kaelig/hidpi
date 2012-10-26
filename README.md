@@ -1,12 +1,12 @@
 # Sass HiDPI
 
-Sass HiDPI is a Sass mixin that helps you seamlessly serve high resolution 
-graphics for high density displays.
+`hidpi()` is a Sass mixin that seamlessly serves high resolution
+background images to high density (Retina-like) displays.
 
 ## How to use it
 
 [Download _hidpi.scss](https://raw.github.com/Kaelig/sass-hidpi/master/_hidpi.scss)
-and put it in your compass project.
+in your Compass project.
 
 Import the partial in your Sass files:
 
@@ -17,11 +17,10 @@ Import the partial in your Sass files:
 Perfect, you can now use the mixin in your selectors:
 
 ```scss
-/* Example: Logo */
 #logo {
   background: url('../images/logo.png') no-repeat;
 
-  // Manually include graphics and background-size
+  // Manually include high resolution graphics and background-size
   @include hidpi {
     background-image: url('../images/logo_x2.png');
     background-size: 100px 30px;
@@ -69,7 +68,7 @@ You can force the high resolution mode:
 }
 ```
 
-Will output:
+Will serve high definition images to regular displays:
 
 ```css
 #logo-auto-debug {
@@ -81,7 +80,7 @@ Will output:
 }
 ```
 
-It's particularly handy when debugging on a regular monitor.
+It's particularly handy when debugging on a non-Retina-like display.
 
 ## Requirements
 
