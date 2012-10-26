@@ -88,6 +88,27 @@ It will then load `logo_x2.png` by default (no `@media` queries):
 }
 ```
 
+### Non-PNG images
+
+`hidpi(image)` is looking by default for `images/image.png`.
+
+If your image is a JPEG, for example `image.jpg`, you should specify it as
+a second argument:
+
+```scss
+#image-jpeg {
+  @include(image, jpg);
+}
+```
+
+Same story with a GIF:
+
+```scss
+#image-gif {
+  @include(image, gif);
+}
+```
+
 ## Requirements
 
 To use Sass HiDPI, you need:

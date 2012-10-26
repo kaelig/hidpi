@@ -48,3 +48,20 @@ body { font-family: sans-serif; }
   $hidpi-debug: true;
   @include hidpi(logo);
 }
+
+// Different file types (non-PNG)
+
+[id^=test-jpg] { // Set default background image
+  height: image-height('old-logo.jpg');
+  width:  image-width('old-logo.jpg');
+  margin-bottom: 2em;
+}
+
+#test-jpg-extension {
+  $hidpi-debug: false;
+  @include hidpi(old-logo, jpg);
+}
+#test-jpg-extension-debug {
+  $hidpi-debug: true;
+  @include hidpi(old-logo, jpg);
+}
