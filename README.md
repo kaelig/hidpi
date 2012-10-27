@@ -64,8 +64,8 @@ Will output:
 
 ### Debug Mode
 
-You can force `hidpi()` to output high resolution graphics to always serve
-high-definition images and test rendering on a regular display.
+You can force `hidpi()` to always serve high-definition graphics and test
+the rendering on a regular display.
 
 Set the `$hidpi-debug` variable to `true`:
 
