@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>Sass HiDPI Examples</title>
+<link rel="stylesheet" href="stylesheets/examples.css" type="text/css" />
+
+<h1>Sass HiDPI Examples</h1>
+
+<h2>Manually Set Dimensions</h2>
+
+<h3>Regular, Debug Off</h3>
+<div class="example" id="logo-manual"></div>
+
+<pre>
+#logo-manual {
+  background: url('../images/logo.png') no-repeat;
+
+  @include hidpi {
+    background-image: url('../images/logo_x2.png');
+    -webkit-background-size: 250px 188px;
+    -moz-background-size: 250px 188px;
+    -o-background-size: 250px 188px;
+    background-size: 250px 188px;
+  }
+}
+</pre>
+
+
+<h3>HiDPI, Debug On</h3>
+<div class="example" id="logo-manual-debug"></div>
+
+<pre>
+#logo-manual-debug {
+  background: url('../images/logo.png') no-repeat;
+
+  $hidpi-debug: true;
+  @include hidpi {
+    background-image: url('../images/logo_x2.png');
+    -webkit-background-size: 250px 188px;
+    -moz-background-size: 250px 188px;
+    -o-background-size: 250px 188px;
+    background-size: 250px 188px;
+  }
+  $hidpi-debug: false; // Set debug back to false
+}
+</pre>
+
+
+<h2>Automatically Set Dimensions</h2>
+
+<h3>Regular, Debug Off</h3>
+<div class="example" id="logo-auto"></div>
+
+<pre>
+#logo-auto {
+  @include hidpi(logo);
+}
+</pre>
+
+
+<h3>HiDPI, Debug On</h3>
+<div class="example" id="logo-auto-debug"></div>
+
+<pre>
+#logo-auto-debug {
+  $hidpi-debug: true;
+  @include hidpi(logo);
+}
+</pre>
+
+
+<h2>Non PNG images</h2>
+
+<h3>JPEG, Debug Off</h3>
+<div class="example" id="example-jpg-extension"></div>
+
+<pre>
+#example-jpg-extension {
+  $hidpi-debug: false;
+  @include hidpi(old-logo, jpg);
+}
+</pre>
+
+
+
+<h3>JPEG, Debug On</h3>
+<div class="example" id="example-jpg-extension-debug"></div>
+
+<pre>
+#example-jpg-extension-debug {
+  $hidpi-debug: true;
+  @include hidpi(old-logo, jpg);
+}
+</pre>
+

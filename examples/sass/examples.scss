@@ -1,11 +1,16 @@
 @import '../../hidpi';
 
 body { font-family: sans-serif; }
+pre  { font-family: Monaco, monospace; }
+
+.example {
+  margin-bottom: 2em;
+  border: 4px solid #ccc;
+}
 
 [id^=logo] { // Set default background image
   height: image-height('logo.png');
   width:  image-width('logo.png');
-  margin-bottom: 2em;
 }
 
 // Set a content block and manually pass declarations
@@ -51,17 +56,18 @@ body { font-family: sans-serif; }
 
 // Different file types (non-PNG)
 
-[id^=test-jpg] { // Set default background image
+[id^=example-jpg] { // Set default background image
   height: image-height('old-logo.jpg');
   width:  image-width('old-logo.jpg');
   margin-bottom: 2em;
 }
 
-#test-jpg-extension {
+#example-jpg-extension {
   $hidpi-debug: false;
   @include hidpi(old-logo, jpg);
 }
-#test-jpg-extension-debug {
+
+#example-jpg-extension-debug {
   $hidpi-debug: true;
   @include hidpi(old-logo, jpg);
 }
