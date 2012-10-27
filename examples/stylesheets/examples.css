@@ -63,7 +63,6 @@ pre {
 [id^=example-jpg] {
   height: 108px;
   width: 108px;
-  margin-bottom: 2em;
 }
 
 #example-jpg-extension {

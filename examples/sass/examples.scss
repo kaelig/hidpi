@@ -59,7 +59,6 @@ pre  { font-family: Monaco, monospace; }
 [id^=example-jpg] { // Set default background image
   height: image-height('old-logo.jpg');
   width:  image-width('old-logo.jpg');
-  margin-bottom: 2em;
 }
 
 #example-jpg-extension {
