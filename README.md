@@ -3,6 +3,8 @@
 `hidpi()` is a Sass mixin that seamlessly serves high resolution
 background images to high density (Retina-like) displays.
 
+**[View examples](http://www.kaelig.fr/hidpi/examples/ "HiDPI Examples")**
+
 ## How to Use It
 
 [Download _hidpi.scss](https://raw.github.com/kaelig/hidpi/master/_hidpi.scss)
