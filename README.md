@@ -1,12 +1,12 @@
-# Sass HiDPI
+# HiDPI for Sass & Compass
 
 `hidpi()` is a Sass mixin that seamlessly serves high resolution
 background images to high density (Retina-like) displays.
 
 ## How to Use It
 
-[Download _hidpi.scss](https://raw.github.com/Kaelig/sass-hidpi/master/_hidpi.scss)
-to your Compass project.
+[Download _hidpi.scss](https://raw.github.com/Kaelig/hidpi/master/_hidpi.scss)
+to your Sass or Compass project.
 
 Import the partial in your Sass files:
 
@@ -111,8 +111,8 @@ Same story with a GIF:
 
 To use Sass HiDPI, you need:
 
-- Sass ~> 3.2
-- Compass ~> 0.12.2
+- Sass ~> 3.2 (for manual `@include`)
+- Compass ~> 0.12.2 (for auto `@include(image);`)
 
 Image files should follow these naming conventions:
 
