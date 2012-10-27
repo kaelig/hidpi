@@ -5,7 +5,7 @@ background images to high density (Retina-like) displays.
 
 ## How to Use It
 
-[Download _hidpi.scss](https://raw.github.com/Kaelig/hidpi/master/_hidpi.scss)
+[Download _hidpi.scss](https://raw.github.com/kaelig/hidpi/master/_hidpi.scss)
 to your Sass or Compass project.
 
 Import the partial in your Sass files:
