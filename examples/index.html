@@ -3,14 +3,21 @@
 <title>HiDPI Examples</title>
 <link rel="stylesheet" href="stylesheets/examples.css" type="text/css" />
 
-<h1>HiDPI Examples</h1>
+<header>
+  <h1>HiDPI</h1>
 
-<h2>Manually Set Dimensions</h2>
+  <p><code>hidpi()</code> is a Sass mixin that seamlessly serves high resolution background images to high density (Retina-like) displays.</p>
+</header>
 
-<h3>Regular, Debug Off</h3>
-<div class="example" id="logo-manual"></div>
+<section>
+  <h1>Examples</h1>
 
-<pre>
+  <h2>Manually Set Background URL &amp; Size</h2>
+
+  <h3>Regular, Debug Off</h3>
+  <div class="example" id="logo-manual"></div>
+
+  <pre>
 #logo-manual {
   background: url('../images/logo.png') no-repeat;
 
@@ -22,13 +29,13 @@
     background-size: 250px 188px;
   }
 }
-</pre>
+  </pre>
 
 
-<h3>HiDPI, Debug On</h3>
-<div class="example" id="logo-manual-debug"></div>
+  <h3>HiDPI, Debug On</h3>
+  <div class="example" id="logo-manual-debug"></div>
 
-<pre>
+  <pre>
 #logo-manual-debug {
   background: url('../images/logo.png') no-repeat;
 
@@ -42,53 +49,54 @@
   }
   $hidpi-debug: false; // Set debug back to false
 }
-</pre>
+  </pre>
 
 
-<h2>Automatically Set Dimensions</h2>
+  <h2>Automatically Background URL &amp; Size</h2>
 
-<h3>Regular, Debug Off</h3>
-<div class="example" id="logo-auto"></div>
+  <h3>Regular, Debug Off</h3>
+  <div class="example" id="logo-auto"></div>
 
-<pre>
+  <pre>
 #logo-auto {
   @include hidpi(logo);
 }
-</pre>
+  </pre>
 
 
-<h3>HiDPI, Debug On</h3>
-<div class="example" id="logo-auto-debug"></div>
+  <h3>HiDPI, Debug On</h3>
+  <div class="example" id="logo-auto-debug"></div>
 
-<pre>
+  <pre>
 #logo-auto-debug {
   $hidpi-debug: true;
   @include hidpi(logo);
 }
-</pre>
+  </pre>
 
 
-<h2>Non PNG images</h2>
+  <h2>Non PNG images</h2>
 
-<h3>JPEG, Debug Off</h3>
-<div class="example" id="example-jpg-extension"></div>
+  <h3>JPEG, Debug Off</h3>
+  <div class="example" id="example-jpg-extension"></div>
 
-<pre>
+  <pre>
 #example-jpg-extension {
   $hidpi-debug: false;
   @include hidpi(old-logo, jpg);
 }
-</pre>
+  </pre>
 
 
+  <h3>JPEG, Debug On</h3>
+  <div class="example" id="example-jpg-extension-debug"></div>
 
-<h3>JPEG, Debug On</h3>
-<div class="example" id="example-jpg-extension-debug"></div>
-
-<pre>
+  <pre>
 #example-jpg-extension-debug {
   $hidpi-debug: true;
   @include hidpi(old-logo, jpg);
 }
-</pre>
+  </pre>
+</section>
 
+<a href="https://github.com/you"><img style="position: fixed; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
