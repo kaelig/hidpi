@@ -1,14 +1,5 @@
 @import '../../hidpi';
 
-// Basic styling
-body     { font-family: sans-serif; padding: .5em 1em; }
-pre      { font-family: Monaco, monospace; overflow-x: auto; color: #666; }
-h1       { font-size: 2.75em; }
-header p { font-size: 1.5em; }
-
-
-// Examples
-
 .example {
   margin-bottom: 2em;
   border: 4px solid #ccc;
@@ -76,3 +67,11 @@ header p { font-size: 1.5em; }
   $hidpi-debug: true;
   @include hidpi(old-logo, jpg);
 }
+
+
+// Basic document styling
+
+body     { font-family: sans-serif; padding: .5em 1em; }
+pre      { font-family: Monaco, monospace; overflow-x: auto; color: #666; }
+h1       { font-size: 2.75em; }
+header p { font-size: 1.5em; }
