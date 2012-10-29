@@ -44,7 +44,8 @@ Will output:
 @media (-webkit-min-device-pixel-ratio: 1.3),
        (-o-min-device-pixel-ratio: 2.6/2),
        (min--moz-device-pixel-ratio: 1.3),
-       (min-device-pixel-ratio: 1.3) {
+       (min-device-pixel-ratio: 1.3),
+       (min-resolution: 1.3dppx) {
   #logo {
     background-image: url("../images/logo_x2.png");
     background-size: 250px 188px;
@@ -57,7 +58,8 @@ Will output:
 @media (-webkit-min-device-pixel-ratio: 1.3),
        (-o-min-device-pixel-ratio: 2.6/2),
        (min--moz-device-pixel-ratio: 1.3),
-       (min-device-pixel-ratio: 1.3) {
+       (min-device-pixel-ratio: 1.3),
+       (min-resolution: 1.3dppx) {
   #logo-auto {
     background-image: url('../images/logo_x2.png');
     -webkit-background-size: 250px 188px;
