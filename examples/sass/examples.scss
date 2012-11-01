@@ -5,7 +5,7 @@
   border: 4px solid #ccc;
 }
 
-[id^=logo] { // Set default background image
+[id^=logo] { // Set size for logo examples
   height: image-height('logo.png');
   width:  image-width('logo.png');
 }
