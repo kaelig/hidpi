@@ -1,7 +1,8 @@
 # Retinafy your website with Sass & Compass
 
 `hidpi()` is a [Sass](http://sass-lang.com/ "Sass - Syntactically Awesome Stylesheets") mixin that seamlessly serves high resolution
-background images to high density (Retina-like) displays.
+background images to high density (Retina-like) displays. Comes with a debug
+mode to test Retina graphics on a regular display.
 
 **[Demonstration](http://www.kaelig.fr/hidpi/examples/ "HiDPI Examples")**
 
