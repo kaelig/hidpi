@@ -1,15 +1,15 @@
 # Retinafy your website with Sass & Compass
 
 `hidpi()` is a [Sass](http://sass-lang.com/ "Sass - Syntactically Awesome Stylesheets") mixin that seamlessly serves high resolution
-background images to high density (Retina-like) displays. Comes with a debug
-mode to test Retina graphics on a regular display.
+background images to high density (Retina-like) displays. It comes with a
+debug mode to test Retina graphics on a regular display.
 
 **[Demonstration](http://www.kaelig.fr/hidpi/examples/ "HiDPI Examples")**
 
 ## How to Use It
 
 [Download _hidpi.scss](https://raw.github.com/kaelig/hidpi/master/_hidpi.scss)
-to your Sass or Compass project.
+to your Sass project (preferably with [Compass](http://compass-style.org/ "Compass Home | Compass Documentation") enabled).
 
 Import the partial in your Sass files:
 
@@ -27,11 +27,11 @@ on high-density displays.
 
 ```scss
 #logo {
-  background: url('../images/logo.png') no-repeat;
+  background: url('logo.png') no-repeat;
   border: 1px solid blue;
 
   @include hidpi {
-    background-image: url('../images/logo_x2.png');
+    background-image: url('logo_x2.png');
     background-size: 250px 188px;
     border-color: red;
   }
@@ -63,7 +63,8 @@ Outputs:
 When passing the name of an image as an argument, `hidpi()` serves the
 equivalent high-resolution image on high-definition displays.
 
-Image files should follow these naming conventions:
+Image files should be named as follows, placed in the `images` folder
+of your Compass project:
 
 - `image.png`: default image
 - `image_x2.png`: high-resolution image
@@ -94,6 +95,8 @@ Outputs:
   }
 }
 ```
+
+Note: this usage requires [Compass](http://compass-style.org/ "Compass Home | Compass Documentation").
 
 ### Debug Mode
 
