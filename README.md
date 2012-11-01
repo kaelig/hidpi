@@ -1,4 +1,4 @@
-# HiDPI for Sass & Compass
+# Retinafy your website with Sass & Compass
 
 `hidpi()` is a [Sass](http://sass-lang.com/ "Sass - Syntactically Awesome Stylesheets") mixin that seamlessly serves high resolution
 background images to high density (Retina-like) displays.
@@ -34,7 +34,8 @@ red instead of blue.
     background-size: 250px 188px;
     border-color: red;
   }
-}```
+}
+```
 
 Outputs:
 
@@ -63,8 +64,8 @@ equivalent high-resolution image on high-definition displays.
 
 Image files should follow these naming conventions:
 
-- `image.png`: default
-- `image_x2.png`: high-resolution
+- `image.png`: default image
+- `image_x2.png`: high-resolution image
 
 ```scss
 #logo-auto {
