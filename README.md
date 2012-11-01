@@ -18,11 +18,11 @@ Import the partial in your Sass files:
 
 Perfect, you can now use the mixin in your selectors.
 
-### Passing content to the mixin
+### Passing Content to the Mixin
 
 You can virtually pass anything to the mixin. In this example,
-the border of the `#logo` element on high-density displays is
-red instead of blue.
+the border-color of the `#logo` element is red instead of blue
+on high-density displays.
 
 ```scss
 #logo {
@@ -57,7 +57,7 @@ Outputs:
 }
 ```
 
-### Image only
+### Image Only
 
 When passing the name of an image as an argument, `hidpi()` serves the
 equivalent high-resolution image on high-definition displays.
