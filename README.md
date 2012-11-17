@@ -31,11 +31,11 @@ In this example, the border color of the `#logo` element is:
 
 ```scss
 #logo {
-  background: url('logo.png') no-repeat;
+  background: url('../images/logo.png') no-repeat;
   border: 1px solid blue;
 
   @include hidpi {
-    background-image: url('logo_x2.png');
+    background-image: url('../images/logo_x2.png');
     background-size: 250px 188px;
     border-color: red;
   }
