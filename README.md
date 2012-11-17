@@ -21,9 +21,13 @@ Perfect, you can now use the mixin in your selectors.
 
 ### Passing Content to the Mixin
 
-You can virtually pass anything to the mixin. In this example,
-the border-color of the `#logo` element is red instead of blue
-on high-density displays.
+You can virtually pass anything to the mixin and it will be displayed on high
+density displays.
+
+In this example, the border color of the `#logo` element is:
+
+- **red** on regular displays
+- **blue** on HiDPI (Retina-like) displays
 
 ```scss
 #logo {
@@ -146,7 +150,6 @@ Same story with a GIF:
 ```
 
 ## Requirements
-
 
 - Sass ~> 3.2 (for manual `@include`)
 - Compass ~> 0.12.2 (for auto `@include(image);`)
