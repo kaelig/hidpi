@@ -137,7 +137,7 @@ a second argument:
 
 ```scss
 #image-jpeg {
-  @include(image, jpg);
+  @include hidpi(image, jpg);
 }
 ```
 
@@ -145,7 +145,7 @@ Same story with a GIF:
 
 ```scss
 #image-gif {
-  @include(image, gif);
+  @include hidpi(image, gif);
 }
 ```
 
