@@ -42,7 +42,7 @@ In this example, the border color of the `#logo` element is:
 }
 ```
 
-Outputs:
+Compiles to:
 
 ```css
 #logo {
@@ -79,7 +79,7 @@ of your Compass project:
 }
 ```
 
-Outputs:
+Compiles to:
 
 ```css
 #logo-auto {
@@ -116,7 +116,7 @@ Set the `$hidpi-debug` variable to `true`:
 }
 ```
 
-It will then load `logo_x2.png` by default (no `@media` queries):
+Compiles to:
 
 ```css
 #logo-auto-debug {
@@ -127,6 +127,8 @@ It will then load `logo_x2.png` by default (no `@media` queries):
   background-size: 250px 188px;
 }
 ```
+
+It loads `logo_x2.png` by default (no `@media` queries).
 
 #### Non-PNG images
 
