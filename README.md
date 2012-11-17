@@ -151,10 +151,11 @@ Same story with a GIF:
 
 ## Requirements
 
-- Sass ~> 3.2 (for manual `@include`)
-- Compass ~> 0.12.2 (for auto `@include(image);`)
+- Sass ~> 3.2 (for manual `@include hidpi {}`)
+- Compass ~> 0.12.2 (for auto `@include hidpi(image);`)
 
-Note: Compass is only needed if passing arguments to `hidpi()`.
+Note: Compass is only needed when passing arguments to `hidpi()` instead of
+a content-block.
 
 ## Also Read
 
