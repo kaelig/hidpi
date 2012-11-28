@@ -163,3 +163,4 @@ a content-block.
 
 - [Easy retina-ready images using SCSS by Jason Z. of 37signals](http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss)
 - [Retinafy your web sites and apps — ebook by Thomas Fuchs](http://retinafy.me/)
+- [Gist: Magically retinafy your sprites with Compass and HiDPI](https://gist.github.com/4160546)
