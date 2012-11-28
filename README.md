@@ -163,4 +163,10 @@ a content-block.
 
 - [Easy retina-ready images using SCSS by Jason Z. of 37signals](http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss)
 - [Retinafy your web sites and apps — ebook by Thomas Fuchs](http://retinafy.me/)
+
+## More HiDPI examples and resources
+
 - [Gist: Magically retinafy your sprites with Compass and HiDPI](https://gist.github.com/4160546)
+- [Gist: Using Compass to generate normal and retina sprite maps](https://gist.github.com/2140082)
+- [Compass mixins for dealing with HDPI (a.k.a. Retina) sprites and images in your CSS by @pierreburel](https://github.com/pierreburel/compass-hdpi)
+- [A mixin for creating retina sprites with hover & active states by @AdamBrodzinski](https://github.com/AdamBrodzinski/Retina-Sprites-for-Compass)
