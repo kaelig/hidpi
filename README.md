@@ -170,3 +170,4 @@ a content-block.
 - [Gist: Using Compass to generate normal and retina sprite maps](https://gist.github.com/2140082)
 - [Compass mixins for dealing with HDPI (a.k.a. Retina) sprites and images in your CSS by @pierreburel](https://github.com/pierreburel/compass-hdpi)
 - [A mixin for creating retina sprites with hover & active states by @AdamBrodzinski](https://github.com/AdamBrodzinski/Retina-Sprites-for-Compass)
+- [Retina Sprites with Compass](https://github.com/Gaya/Retina-Sprites-for-Compass) — [Blog post](http://www.gayadesign.com/diy/retina-sprites-for-compass/)
