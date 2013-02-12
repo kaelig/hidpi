@@ -1,3 +1,34 @@
+# Changes made by @lucho870601:
+
+## Image dimention mixin
+
+Added `sized-hidpi` mixin to supply the original image width and height as CSS properties. This is useful when you have background image on an empty element with no size `width:0; height:0`.
+
+```scss
+.icon_foo {
+    @include sized-hidpi(icon_foo);
+}
+```
+
+
+## Sized image definition
+
+```scss
+@include sized-hidpi-image(icon_foo);
+```
+
+
+## Easier building of retina sprites
+
+Added support for easier building of retina sprites based on [Gist: Magically retinafy your sprites with Compass and HiDPI](https://gist.github.com/4160546).
+
+```scss
+@import "icons/*.png";
+@import "icons_x2/*.png";
+@include retina-sprites-support($icons-sprites, $icons_x2-sprites);
+@include all-icons-sprites(true);
+```
+
 # Retinafy your website with Sass & Compass
 
 `hidpi()` is a [Sass](http://sass-lang.com/ "Sass - Syntactically Awesome Stylesheets") mixin that seamlessly serves high resolution
