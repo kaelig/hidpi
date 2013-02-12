@@ -4,37 +4,71 @@ $hidpi-debug: false !default;
 @import 'compass/css3';
 
 @mixin hidpi-abstract($image, $extension) {
-  $image-fullname: '#{$image}.#{$extension}';
-  $image-hidpi-fullname: '#{$image}_x2.#{$extension}';
+    $image-fullname: '#{$image}.#{$extension}';
+    $image-hidpi-fullname: '#{$image}_x2.#{$extension}';
 
-  background-image: image-url($image-hidpi-fullname);
-  @include background-size(
-    image-width($image-fullname)
-    image-height($image-fullname)
-  );
+    background-image: image-url($image-hidpi-fullname);
+    @include background-size(
+            image-width($image-fullname)
+            image-height($image-fullname)
+    );
 }
 
-@mixin hidpi($image: false, $extension: png) {
-  @if $hidpi-debug {
-    @if $image {
-      @include hidpi-abstract($image, $extension);
+@mixin hidpi($image: false, $extension: png, $include-image-size: false) {
+    @if $hidpi-debug {
+        @if $image {
+            @include hidpi-abstract($image, $extension);
+        } @else {
+            @content;
+        }
     } @else {
-      @content;
+        @if $image {
+            $image-fullname: '#{$image}.#{$extension}';
+            background-image: image-url($image-fullname);
+            @if $include-image-size {
+                width: image-width($image-fullname);
+                height: image-height($image-fullname);
+            }
+        }
+        @media (-webkit-min-device-pixel-ratio: 1.3),
+        (-o-min-device-pixel-ratio: 2.6/2),
+        (min--moz-device-pixel-ratio: 1.3),
+        (min-device-pixel-ratio: 1.3),
+        (min-resolution: 1.3dppx) {
+            @if $image {
+                @include hidpi-abstract($image, $extension);
+            } @else {
+                @content;
+            }
+        }
     }
-  } @else {
-    @if $image {
-      background-image: image-url('#{$image}.#{$extension}');
-    }
-    @media (-webkit-min-device-pixel-ratio: 1.3),
-           (-o-min-device-pixel-ratio: 2.6/2),
-           (min--moz-device-pixel-ratio: 1.3),
-           (min-device-pixel-ratio: 1.3),
-           (min-resolution: 1.3dppx) {
-      @if $image {
-        @include hidpi-abstract($image, $extension);
-      } @else {
-        @content;
-      }
-    }
-  }
 }
+
+@mixin sized-hidpi($image, $extension: png) {
+    @include hidpi($image, $extension, true);
+}
+
+@mixin sized-hidpi-image($image, $extension: png) {
+    .#{$image} {
+        @include hidpi($image, $extension, true);
+    }
+}
+
+@mixin retina-sprites-support($original-sprites, $retina-sprites) {
+    .#{sprite-map-name($original-sprites)}-sprite {
+        @include hidpi {
+            $sprites-width: image-width(sprite-path($original-sprites));
+            @include background-size($sprites-width auto);
+            background-image: sprite-url($retina-sprites);
+        }
+    }
+}
+
+/* Usage:
+@import "icons/*.png";
+@import "icons_x2/*.png";
+@include retina-sprites-support($icons-sprites, $icons_x2-sprites);
+@include all-icons-sprites(true);
+*/
+
+
