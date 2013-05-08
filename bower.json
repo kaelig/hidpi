@@ -1,7 +1,7 @@
 {
   "name": "sass-hidpi",
   "description": "hidpi() is a Sass mixin that serves high resolution graphics to high density (Retina-like) displays",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "_hidpi.scss",
   "author": "Kaelig",
   "ignore": [
