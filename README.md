@@ -50,9 +50,7 @@ Compiles to:
   border: 1px solid blue;
 }
 @media (-webkit-min-device-pixel-ratio: 1.3),
-       (-o-min-device-pixel-ratio: 2.6/2),
-       (min--moz-device-pixel-ratio: 1.3),
-       (min-device-pixel-ratio: 1.3),
+       (min-resolution: 124.8dpi),
        (min-resolution: 1.3dppx) {
   #logo {
     background-image: url("../images/logo_x2.png");
@@ -86,21 +84,16 @@ Compiles to:
   background-image: url('../images/logo.png');
 }
 @media (-webkit-min-device-pixel-ratio: 1.3),
-       (-o-min-device-pixel-ratio: 2.6/2),
-       (min--moz-device-pixel-ratio: 1.3),
-       (min-device-pixel-ratio: 1.3),
+       (min-resolution: 124.8dpi),
        (min-resolution: 1.3dppx) {
   #logo-auto {
     background-image: url('../images/logo_x2.png');
-    -webkit-background-size: 250px 188px;
-    -moz-background-size: 250px 188px;
-    -o-background-size: 250px 188px;
     background-size: 250px 188px;
   }
 }
 ```
 
-Note: this usage requires [Compass](http://compass-style.org/ "Compass Home | Compass Documentation").
+Note: this feature requires [Compass](http://compass-style.org/ "Compass Home | Compass Documentation").
 
 ### Debug Mode
 
@@ -121,9 +114,6 @@ Compiles to:
 ```css
 #logo-auto-debug {
   background-image: url('../images/logo_x2.png');
-  -webkit-background-size: 250px 188px;
-  -moz-background-size: 250px 188px;
-  -o-background-size: 250px 188px;
   background-size: 250px 188px;
 }
 ```
@@ -163,6 +153,7 @@ a content-block.
 
 - [Easy retina-ready images using SCSS by Jason Z. of 37signals](http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss)
 - [Retinafy your web sites and apps — ebook by Thomas Fuchs](http://retinafy.me/)
+- [Cross Browser Retina/High Resolution Media Queries](http://www.brettjankord.com/2012/11/28/cross-browser-retinahigh-resolution-media-queries/)
 
 ## More HiDPI examples and resources
 
