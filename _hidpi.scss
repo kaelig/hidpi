@@ -32,7 +32,8 @@ $hidpi-min-pixel-ratio: 1.3 !default;
     @if $image {
       background-image: image-url('#{$image}.#{$extension}');
     }
-    // Source: http://www.brettjankord.com/2012/11/28/cross-browser-retinahigh-resolution-media-queries/
+    // Inspired by:
+    // http://www.brettjankord.com/2012/11/28/cross-browser-retinahigh-resolution-media-queries/
     @media (-webkit-min-device-pixel-ratio: $hidpi-min-pixel-ratio),
            (min-resolution: $hidpi-min-pixel-ratio * 96dpi),
            (min-resolution: $hidpi-min-pixel-ratio * 1dppx) {
