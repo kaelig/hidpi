@@ -8,16 +8,17 @@ debug mode to test Retina graphics on a regular display.
 
 ## How to Use It
 
-[Download _hidpi.scss](https://raw.github.com/kaelig/hidpi/master/_hidpi.scss)
+* Install with [Bower](http://bower.io/ "BOWER: A package manager for the web"): `bower install sass-hidpi`
+* Or [Download _hidpi.scss](https://raw.github.com/kaelig/hidpi/master/_hidpi.scss)
 to your Sass project (preferably with [Compass](http://compass-style.org/ "Compass Home | Compass Documentation") enabled).
 
 Import the partial in your Sass files:
 
 ```scss
-@import 'hidpi';
+@import 'path/to/hidpi';
 ```
 
-Perfect, you can now use the mixin in your selectors.
+Perfect, you can now use the mixin in your Sass project.
 
 ### Passing Content to the Mixin
 
