@@ -22,8 +22,8 @@ density displays.
 
 In this example, the border color of the `#logo` element is:
 
-- **red** on regular displays
-- **blue** on HiDPI (Retina-like) displays
+- **blue** on regular displays
+- **red** on HiDPI (Retina-like) displays
 
 ```scss
 #logo {
